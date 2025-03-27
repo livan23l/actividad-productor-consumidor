@@ -1,0 +1,16 @@
+.button {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 1.5rem;
+    border: 3px solid var(--color-primary);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary);
+}

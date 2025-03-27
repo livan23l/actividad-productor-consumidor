@@ -1,0 +1,114 @@
+.presenters {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presenter {
+    width: min(50%, 10rem);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+.simulation {
+    width: 100%;
+    max-height: 20rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1px;
+    overflow: hidden;
+    transition: max-height 1.5s, visibility 1.5s, outline 0.5s;
+}
+
+.simulation--1 {
+    outline: 2px solid var(--color-variant-1);
+}
+
+.simulation--2 {
+    outline: 2px solid var(--color-variant-2);
+}
+
+.simulation--hidden {
+    max-height: 0;
+    visibility: hidden;
+}
+
+.simulation__cell {
+    width: max(7.5%, 3.5rem);
+    aspect-ratio: 1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.options--start {
+    align-self: flex-start;
+}
+
+.options--character {
+    margin-block: 1rem;
+    height: 0;
+    transition: opacity 0.5s;
+}
+
+.options--hidden {
+    margin-block: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.options--row {
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.product {
+    width: 95%;
+    height: 95%;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: radial-gradient(#3FC9FF, #315392);
+}
+
+.product--show {
+    scale: 0;
+    animation: show_product 0.75s forwards;
+}
+
+.product--hide {
+    animation: hide_product 0.75s;
+}
+
+@keyframes show_product {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes hide_product {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 0;
+    }
+}

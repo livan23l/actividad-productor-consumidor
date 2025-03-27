@@ -1,0 +1,83 @@
+/** Page styles **/
+
+:root {
+    --color-skin: #FFCEAD;
+    --color-primary: #3A99CF;
+    --color-primary-light: #A7D6F1;
+    --color-comment: #F3F3F3;
+    --color-variant-1: #9C2C28;
+    --color-variant-2: #0A36C5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* Classes */
+
+.page {
+    min-height: 100dvh;
+    background-color: var(--color-primary-light);
+    font-family: "Manrope";
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    grid-row: 1/2;
+    padding-block: 1rem;
+    background-color: var(--color-primary);
+}
+
+.header__title {
+    text-align: center;
+}
+
+.main {
+    grid-row: 2/3;
+    max-width: 70rem;
+    min-width: 40rem;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer {
+    grid-row: 3/4;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+}
+
+.footer__text {
+    font-size: 1.1rem;
+}

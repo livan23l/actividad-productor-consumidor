@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 11 productor-consumidor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+    <!-- Templates -->
+    <template id="template-character">
+        <div class="character">
+            <div class="hair"></div>
+            <div class="face"></div>
+            <div class="eyes">
+                <div class="eyes__left"></div>
+                <div class="eyes__right"></div>
+            </div>
+            <div class="mouth"></div>
+            <p class="character__name"></p>
+            <p class="character__comment character__comment--hidden"></p>
+            <section data-action="action-menu" class="character__action character__action--hidden">
+                <h2 class="action__title"></h2>
+                <div class="action__content">
+                    <button class="action__minus" type="button"></button>
+                    <p>2</p>
+                    <button class="action__plus"></button>
+                </div>
+                <button class="action__button" type="button">Agregar</button>
+            </section>
+        </div>
+        <div data-action="character-options-1" class="options options--character options--hidden">
+            <button class="button button--primary" type="button">
+                Despertar
+            </button>
+        </div>
+        <div data-action="character-options-2" class="options options--character options--row options--hidden">
+            <button class="button button--primary" type="button">
+                Acción
+            </button>
+            <button class="button button--primary" type="button">
+                Dormir
+            </button>
+        </div>
+    </template>
+
+    <template id="template-product">
+        <div class="product"></div>
+    </template>
+
+    <header class="header">
+        <h1 class="header__title">Actividad 11 productor-consumidor</h1>
+    </header>
+
+    <main class="main">
+        <section class="presenters">
+            <!-- Producer -->
+            <div id="producer" class="presenter"></div>
+
+            <div id="options" class="options options--start">
+                <!-- Start simulation button -->
+                <button id="automatic-simulation-button" class="button button--primary" type="button">
+                    Simulación automática
+                </button>
+                <!-- Start simulation button -->
+                <button id="manual-simulation-button" class="button button--primary" type="button">
+                    Simulación manual
+                </button>
+            </div>
+
+            <!-- Consumer -->
+            <div id="consumer" class="presenter"></div>
+        </section>
+
+        <!-- Simulation section -->
+        <section id="simulation" class="simulation simulation--hidden">
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+            <div class="simulation__cell"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h3 class="footer__title">Integrantes del equipo</h3>
+        <p class="footer__text">Iván Alfredo López Barrera - 217628305</p>
+        <p class="footer__text">Zuzuky Guadalupe Gazcón González - 300272566</p>
+    </footer>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
